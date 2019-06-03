@@ -31,7 +31,7 @@ class HomeProvider extends Component {
     super(props);
 
     this.state = {
-      heroesList: [],
+      heroesList: "",
       loading: true
     };
   }
@@ -59,6 +59,7 @@ class HomeProvider extends Component {
 
         this.setState({
           heroesList: dataHeroes,
+          //heroesList: [...this.state.heroesList, dataHeroes],
           loading: false
         });
       });
